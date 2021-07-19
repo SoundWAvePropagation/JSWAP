@@ -1,5 +1,5 @@
 module JSWAP
 
-greet() = print("Hello World!")
+include("seismic3D_function_12th_order.jl");
 
 end # module
