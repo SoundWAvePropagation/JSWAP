@@ -10,7 +10,7 @@ else
 end
 
 "
-meshgrid x and year
+Meshgrid 2 vectors or 3 vectors
 "
 function meshgrid(x,y)
     x2=zeros(length(x),length(y));

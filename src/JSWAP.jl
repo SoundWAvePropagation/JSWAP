@@ -1,5 +1,5 @@
 module JSWAP
 
-include("seismic3D_function_12th_order.jl");
+include("JSWAP_CPU_3D_isotropic.jl");
 
-end # module
+end
