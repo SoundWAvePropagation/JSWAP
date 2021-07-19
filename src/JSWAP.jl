@@ -1,5 +1,6 @@
 module JSWAP
 
-include("JSWAP_CPU_3D_isotropic.jl");
+include("./utilities.jl");
+include("./JSWAP_CPU_3D.jl");
 
 end
