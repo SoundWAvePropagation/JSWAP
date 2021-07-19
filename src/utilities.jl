@@ -1,5 +1,7 @@
 module utilities
 export meshgrid,write2mat,readmat,rickerWave
+
+using Random,MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,ProgressMeter
 ##
 "
 Meshgrid 2 vectors or 3 vectors
