@@ -2,8 +2,6 @@
 using MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,
 Statistics,DelimitedFiles,ProgressMeter,JSWAP
 Threads.nthreads()
-## timing
-ti=TimerOutput();
 ## create folder for saving
 p2= @__FILE__;
 p3=chop(p2,head=0,tail=3);
@@ -11,7 +9,7 @@ if isdir(p3)==0
     mkdir(p3);
 end
 ## read stiffness and density
-data=JSWAP.utilities.readmat("./campi/campi_model.mat","campi_model");
+data=JSWAP.utilities.readmat("./examples/Campi/campi_model.mat","campi_model");
 ##
 nx=convert(Int16,data["nx"]);
 ny=convert(Int16,data["ny"]);

@@ -9,6 +9,8 @@ const USE_GPU=false
 else
     @init_parallel_stencil(Threads, Float64, 3);
 end
+## timing
+ti=TimerOutput();
 ##
 @parallel function compute_ax(dt,dx,dy,dz,inv_Qa,lambda,mu,
     beta,
