@@ -5,9 +5,9 @@ using Random,MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,ProgressMeter,
 const USE_GPU=false
 
 @static if USE_GPU
-    @init_parallel_stencil(CUDA, Float64, 2);
+    @init_parallel_stencil(CUDA,Float64,3);
 else
-    @init_parallel_stencil(Threads, Float64, 2);
+    @init_parallel_stencil(Threads,Float64,3);
 end
 ##
 @parallel function compute_ax(dt,dx,dy,dz,inv_Qa,lambda,mu,
