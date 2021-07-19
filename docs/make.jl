@@ -1,5 +1,5 @@
 using Documenter
-using JSWAP
+# using JSWAP
 
 makedocs(
     modules=[JSWAP],
