@@ -1,5 +1,5 @@
 module JSWAP_CPU_3D
-export meshgrid,JSWAP_CPU_3D_isotropic_solver
+export meshgrid,JSWAP_CPU_3D_isotropic_solver,write2mat,readmat,rickerWave
 using Random,MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,ProgressMeter,ParallelStencil,ParallelStencil.FiniteDifferences3D
 
 const USE_GPU=false
