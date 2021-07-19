@@ -2,7 +2,7 @@ using Documenter
 using JSWAP
 
 makedocs(
-    modules=[Julia Sound WAve Propagation],
+    modules=["Julia Sound WAve Propagation"],
     authors="Yi Zhang",
     sitename="JuliaSoundWAvePropagation",
     format=Documenter.HTML(;
