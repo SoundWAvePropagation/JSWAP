@@ -11,7 +11,7 @@ if isdir(p3)==0
     mkdir(p3);
 end
 ## read stiffness and density
-data=readmat("./campi/campi_model.mat","campi_model");
+data=JSWAP.utilities.readmat("./campi/campi_model.mat","campi_model");
 ##
 nx=convert(Int16,data["nx"]);
 ny=convert(Int16,data["ny"]);
@@ -104,7 +104,7 @@ M=2.7;
 freq=3;
 
 # source signal
-singles=rickerWave(freq,dt,nt,M);
+singles=JSWAP.utilities.rickerWave(freq,dt,nt,M);
 
 # give source signal to x direction
 s_src1=zeros(Float32,nt,1);

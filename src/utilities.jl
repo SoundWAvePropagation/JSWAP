@@ -12,20 +12,29 @@ function meshgrid(x,y)
     return x2,y2
 end
 ##
+"
+write a mat file
+"
 function write2mat(path,var)
     file=matopen(path,"w");
     write(file,"data",data);
     close(file);
     return nothing
 end
-
+##
+"
+read a mat file
+"
 function readmat(path,var)
     file=matopen(path);
     tt=read(file,var);
     close(file)
     return tt
 end
-
+##
+"
+ricker wavelet
+"
 function rickerWave(freq,dt,ns,M)
     ## calculate scale
     E=10 .^(5.24+1.44 .*M);
@@ -39,4 +48,5 @@ function rickerWave(freq,dt,ns,M)
     ricker=Float32.(ricker);
     return ricker
 end
+
 end
