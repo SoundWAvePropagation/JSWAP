@@ -555,10 +555,10 @@ version = "8.42.0+4"
 
 [[ParallelStencil]]
 deps = ["CUDA", "MacroTools"]
-git-tree-sha1 = "591528ef25f4d18e3cb2874e4c6ad63bc6b2aa05"
+git-tree-sha1 = "8b665f38866d80682b2291f27abe7987b9753bfe"
 repo-rev = "higher_order_accuracy"
 repo-url = "https://github.com/deconvolution/ParallelStencil.jl"
-uuid = "94395366-693c-11ea-3b26-d9b7aac5d958"
+uuid = "94395366-693c-11ea-3b26-d9b7aac5d950"
 version = "0.5.3"
 
 [[Parsers]]
