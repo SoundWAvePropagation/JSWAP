@@ -1,4 +1,4 @@
-module JSWAP_CPU_3D_isotropic
+module JSWAP_CPU_3D
 export meshgrid,JSWAP_CPU_3D_isotropic_solver
 using Random,MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,ProgressMeter,ParallelStencil,ParallelStencil.FiniteDifferences3D
 

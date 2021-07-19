@@ -1,16 +1,6 @@
 ## import packages
 using MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,
 Statistics,DelimitedFiles,ProgressMeter
-
-const USE_GPU=false;  # Use GPU? If this is set false, then no GPU needs to be available
-using ParallelStencil
-using ParallelStencil.FiniteDifferences3D
-@static if USE_GPU
-    @init_parallel_stencil(CUDA,Float64,3);
-else
-    @init_parallel_stencil(Threads,Float64,3);
-end
-include("./seismic3D_function_12th_order.jl");
 Threads.nthreads()
 ## timing
 ti=TimerOutput();
@@ -53,7 +43,7 @@ mu=data["C"]["C55"];
 #lambda[:,:,1:30] .=0;
 #mu[:,:,1:30] .=0;
 
-inv_Qa=@ones(nx,ny,nz)*0;
+inv_Qa=ones(nx,ny,nz)*0;
 
 C=C2(lambda,
 mu,
@@ -180,7 +170,7 @@ src3=s_src3[:,source_code];
 srcp=s_srcp[:,source_code];
 
 # pass parameters to solver
-v1,v2,v3,R1,R2,R3,P=iso_3D(dt,dx,dy,dz,nt,
+v1,v2,v3,R1,R2,R3,P=JSWAP.JSWAP_CPU_3D.JSWAP_CPU_3D_isotropic_solver(dt,dx,dy,dz,nt,
 nx,ny,nz,X,Y,Z,r1,r2,r3,s1,s2,s3,src1,src2,src3,srcp,
 r1t,r2t,r3t,
 Rm,
