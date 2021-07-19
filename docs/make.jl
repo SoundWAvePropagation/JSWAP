@@ -20,5 +20,5 @@ deploydocs(;
     devbranch = "main",
     devurl = "dev",
     forcepush=true,
-    push_preview = true
+    push_preview =true
 )

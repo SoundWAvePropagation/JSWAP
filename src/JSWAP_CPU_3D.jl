@@ -3,6 +3,7 @@ export JSWAP_CPU_3D_isotropic_solver
 using Random,MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,ProgressMeter,ParallelStencil,ParallelStencil.FiniteDifferences3D
 
 const USE_GPU=false
+
 @static if USE_GPU
     @init_parallel_stencil(CUDA, Float64, 2);
 else
