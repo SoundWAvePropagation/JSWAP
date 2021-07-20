@@ -1,6 +1,8 @@
 module JSWAP_CPU_3D
 export JSWAP_CPU_3D_isotropic_solver
-using Random,MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,ProgressMeter,ParallelStencil,ParallelStencil.FiniteDifferences3D
+include("./ParallelStencil/src/ParallelStencil.jl");
+using Random,MAT,Plots,Dates,TimerOutputs,WriteVTK,DataFrames,CSV,ProgressMeter,
+.ParallelStencil,.ParallelStencil.FiniteDifferences3D
 
 const USE_GPU=false
 
