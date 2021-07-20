@@ -6,7 +6,7 @@ const USE_GPU=false
 
 @static if USE_GPU
     @init_parallel_stencil(CUDA, Float64, 3);
-else
+else]
     @init_parallel_stencil(Threads, Float64, 3);
 end
 ## timing
