@@ -1,5 +1,8 @@
-using Documenter
-using JSWAP
+## add modifed ParallelStencil
+Pkg.add(url="https://github.com/deconvolution/ParallelStencil.jl",
+rev="higher_order_accuracy");
+##
+using Documenter,JSWAP
 
 makedocs(
     modules=[JSWAP],
