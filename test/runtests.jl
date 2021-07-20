@@ -1,3 +1,3 @@
-using Test,JSWAP
+using Test
 
 @test true
